@@ -1,3 +1,4 @@
+
 # Balancer253V
 Regulator PWM do grzałki 3 fazowej rozwiązujący problem 253V.
 Bez lutowania, do zbudowania z gotowych elementów.
@@ -15,6 +16,9 @@ BOM:
 
    
 ![Solarman1](https://github.com/user-attachments/assets/3ee0d55f-0dc5-48f3-82a0-fca5075f27a0)
+
+![BalancerBox2](https://github.com/user-attachments/assets/601542f6-aaf7-4eed-9b31-a82738832229)
+![BalancerBox1](https://github.com/user-attachments/assets/eeb8b421-fe7e-4373-8c0d-0c67b1647204)
 
 ![pzem004t](https://github.com/user-attachments/assets/3bf7131c-a603-4d9c-95f8-cca1d57c64df)
 ![420mA](https://github.com/user-attachments/assets/c1df33d1-80e0-48d1-b87d-9c2287f28ff0)

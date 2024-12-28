@@ -31,6 +31,10 @@ Ponadto tasmota daje nam możliwość wysyłania tego co potrzebujemy po mqtt (n
 Układ działa i jest w fazie testów/tuningu. Póki co, przetestowany kilka dni. Wynik: produkcja energii wzrosła 2x.
 Grzałka umieszczona w bojlerze 200l (ten sam, który podgrzewa pompa ciepła).
 
+Jeśli komuś się to przyda, ktoś zmodyfikuje/ulepszy skrypt, to niech proszę podzieli się wiedzą :)
+
+Nie spalcie chaupy ;)
+
 ![mqtt1](https://github.com/user-attachments/assets/0ad2a44d-125e-4e2e-94c8-ed0e1f2efd60)
 
    

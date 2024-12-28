@@ -19,6 +19,8 @@ Jeśli napięcie jest powyżej ustawionego progu, to PWM zwiększa moc grzałki,
 Jeśli napięcie mieści się w wybranym przedziale, to PWM zostaje bez zmian.
 Jeśli napięcie spadnie poniżej dolnej granicy przedziału, to PWM będzie powoli zmniejszał moc grzałki itd....
 Ze względu na ograniczenie pzem004t (około 200ms na pomiar), zmiany PWM dokonywane są pomiędzy kolejnymi pomiarami pzem'a z zadanym krokiem (co około 20ms, więc niejako "w ciemno").
+Czujnik temperatury zabezpiecza układ przed zagotowaniem wody ;)
+Ze względu na zakłócenia czujnik od czasu do czasu jest niewidoczny dla tasmoty (problem ten jest rozwiązany programowo).
 
 
 Dodatkowo przekaźnik wyłączający stycznik 3 fazowy (tuż przy samej grzałce) w razie awarii.

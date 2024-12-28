@@ -11,10 +11,11 @@ BOM:
 1. ESP32
 2. 3x PZEM-004t
 3. 3x 0-3V na 4-20mA konwerter napięcie na prąd
-4. DS18b20
-5. DC-DC 12/5
-6. DC-DC 12/12 jako stabilizator
-7. Przekaźnik - opcjonalnie
+4. 3x SSR 25A 4-20mA 
+5. DS18b20
+6. DC-DC 12/5
+7. DC-DC 12/12 jako stabilizator
+8. Przekaźnik - opcjonalnie
 
 Układ monitoruje napięcie na trzech fazach (pomiar napięcia co około 200ms - pzem 004t).
 Jeśli napięcie jest powyżej ustawionego progu, to PWM zwiększa moc grzałki, aż do momentu kiedy napięcie spadnie i będzie mieścić się w wybranym przedziale.

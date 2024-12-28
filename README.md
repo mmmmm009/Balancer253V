@@ -14,6 +14,20 @@ BOM:
 6. DC-DC 12/12 jako stabilizator
 7. Przekaźnik - opcjonalnie
 
+Układ monitoruje napięcie na trzech fazach (pomiar napięcia co około 200ms - pzem 004t)
+Jeśli napięcie powyżej ustawionego progu, to PWM zwiększa moc grałki, aż do momentu kiedy napięcie spadnie i będzie mieścić się w wybranym przedziale.
+Jeśli napięcie spadnie jeszcze bardziej (poniżej dolnej granicy przedziału), to PWM będzie powoli zmniejszał moc grzałki itd....
+Ze względu na ograniczenie pzem004t (około 200ms na pomiar), zmiany PWM dokonywane są pomiędzy kolejnymi pomiarami pzem'a z zadanym krokiem.
+
+Dodatkowo przekaźnik wyłączający stycznik 3 fazowy (tuż przy samej grzałce) w razie awarii.
+
+Skrypt napisany został w Berry Script, który dostępny jest "od ręki" na każdej tasmocie ESP32, dzięki temu mamy możliwość łatwej jego zmiany.
+Ponadto tasmota daje nam możliwość wysyłania tego co potrzebujemy po mqtt (np. do Home Assistanta).
+
+Układ działa i jest w fazie testów/tuningu. Póki co, przetestowany kilka dni. Wynik: produkcja energii wzrosła 2x.
+Grzałka umieszczona w bojlerze 200l (ten sam, który podgrzewa pompa ciepła).
+
+
    
 ![Solarman1](https://github.com/user-attachments/assets/3ee0d55f-0dc5-48f3-82a0-fca5075f27a0)
 

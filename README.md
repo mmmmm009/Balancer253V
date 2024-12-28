@@ -33,6 +33,8 @@ Grzałka umieszczona w bojlerze 200l (ten sam, który podgrzewa pompa ciepła).
 
 Jeśli komuś się to przyda, ktoś zmodyfikuje/ulepszy skrypt, to niech proszę podzieli się wiedzą :)
 
+Oba pliki .be należy wgrać na tasmotę przez Tools/Manage file system na stronie waszej tasmoty.
+
 Nie spalcie chaupy ;)
 
 ![mqtt1](https://github.com/user-attachments/assets/0ad2a44d-125e-4e2e-94c8-ed0e1f2efd60)

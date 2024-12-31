@@ -15,9 +15,9 @@ BOM:
 7. DC-DC 12/12 as a stabilizer
 8. Relay - optional
    
-The system monitors the voltage on three phases (voltage measurement approximately every 200ms - pzem 004t). If the voltage is above the set threshold, the PWM increases the heater power until the voltage drops and falls within the selected range. If the voltage is within the selected range, the PWM remains unchanged. If the voltage drops below the lower limit of the range, the PWM will slowly reduce the heater power, etc. Due to the limitation of pzem004t (about 200ms per measurement), PWM changes are made between subsequent pzem measurements with a set step (about every 20ms, so "blindly"). The temperature sensor protects the system from boiling water ;) Due to interference, the sensor is sometimes invisible to the tasmota (this problem is solved by software).
+The system monitors the voltage on three phases (voltage measurement approximately every 200ms - pzem 004t). If the voltage is above the set threshold, the PWM increases the heater power until the voltage drops below the selected range. If the voltage is within the selected range, the PWM remains unchanged. If the voltage drops below the lower limit of the range, the PWM will slowly reduce the heater power, etc. Due to the limitation of pzem004t (about 200ms per measurement), PWM changes are made between subsequent pzem measurements with a set step (about every 20ms, so "blindly"). The temperature sensor protects the system from boiling water ;) Due to interference, the sensor is sometimes invisible to the tasmota (this problem is solved by software).
 
-Additionally, a relay that switches off the 3-phase contactor (right next to the heater) in the event of a failure.
+Additionally, a relay that switches off the 3-phase heater (right next to the heater) in the event of a failure may be installed.
 
 The script was written in Berry Script, which is available "off the shelf" on every ESP32 tasmota, thanks to which we can easily change it. In addition, tasmota gives us the ability to send what we need via mqtt (e.g. to Home Assistant).
 

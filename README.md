@@ -1,6 +1,6 @@
 # Balancer253V
 
-PWM controller for a 3-phase heater solving the 253V problem. No soldering, to build from ready-made components. Based on ESP32 and tasmota
+PWM controller for a 3-phase heater solving the 253V problem (when photovoltaic panel inverter exceeds 253V - limit for Poland) . No soldering, to build from ready-made components. Based on ESP32 and tasmota
 
 I am writing the description and diagram after the fact and something may be slightly wrong ;).
 
@@ -14,7 +14,7 @@ BOM:
 6. DC-DC 12/5
 7. DC-DC 12/12 as a stabilizer
 8. Relay - optional
-9. 
+   
 The system monitors the voltage on three phases (voltage measurement approximately every 200ms - pzem 004t). If the voltage is above the set threshold, the PWM increases the heater power until the voltage drops and falls within the selected range. If the voltage is within the selected range, the PWM remains unchanged. If the voltage drops below the lower limit of the range, the PWM will slowly reduce the heater power, etc. Due to the limitation of pzem004t (about 200ms per measurement), PWM changes are made between subsequent pzem measurements with a set step (about every 20ms, so "blindly"). The temperature sensor protects the system from boiling water ;) Due to interference, the sensor is sometimes invisible to the tasmota (this problem is solved by software).
 
 Additionally, a relay that switches off the 3-phase contactor (right next to the heater) in the event of a failure.

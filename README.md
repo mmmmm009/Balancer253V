@@ -30,7 +30,7 @@ Both .be files should be uploaded to the tape using Tools/Manage file system on 
 Don't burn the house down ;)
 
 
-
+# Balancer253V
 Regulator PWM do grzałki 3 fazowej rozwiązujący problem 253V.
 Bez lutowania, do zbudowania z gotowych elementów.
 W oparciu o ESP32 i tasmota

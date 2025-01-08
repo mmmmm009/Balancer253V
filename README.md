@@ -81,6 +81,10 @@ Nie spalcie chaupy ;)
 
 ![MQTT2](https://github.com/user-attachments/assets/61db354c-75d9-43ca-9bae-845cac09eee5)
 
+![tamotaWeb](https://github.com/user-attachments/assets/1b2ed11e-986d-48a4-972c-7743d7acd809)
+
+![Uploading tasmotaConfig.png…]()
+
 
 
 ![BalancerBox2](https://github.com/user-attachments/assets/601542f6-aaf7-4eed-9b31-a82738832229)

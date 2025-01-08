@@ -83,7 +83,8 @@ Nie spalcie chaupy ;)
 
 ![tamotaWeb](https://github.com/user-attachments/assets/1b2ed11e-986d-48a4-972c-7743d7acd809)
 
-![Uploading tasmotaConfig.png…]()
+![tasmotaConfig](https://github.com/user-attachments/assets/3d1396a9-8ba7-4ae2-a0f8-9565e72e5875)
+
 
 
 

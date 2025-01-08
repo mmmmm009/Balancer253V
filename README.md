@@ -1,4 +1,4 @@
-# Balancer253V
+# Balancer253V - ENGLISH
 
 PWM controller for a 3-phase heater solving the 253V problem (when photovoltaic panel inverter exceeds 253V - limit for Poland) . No soldering, to build from ready-made components. Based on ESP32 and tasmota
 
@@ -30,7 +30,8 @@ Both .be files should be uploaded to the tape using Tools/Manage file system on 
 Don't burn the house down ;)
 
 
-# Balancer253V
+# Balancer253V - POLISH
+
 Regulator PWM do grzałki 3 fazowej rozwiązujący problem 253V.
 Bez lutowania, do zbudowania z gotowych elementów.
 W oparciu o ESP32 i tasmota
@@ -78,9 +79,13 @@ Nie spalcie chaupy ;)
 
 ![Solarman2](https://github.com/user-attachments/assets/d086ebe6-192d-44be-9bd1-42ffae936477)
 
+![MQTT2](https://github.com/user-attachments/assets/61db354c-75d9-43ca-9bae-845cac09eee5)
+
+
 
 ![BalancerBox2](https://github.com/user-attachments/assets/601542f6-aaf7-4eed-9b31-a82738832229)
 ![BalancerBox1](https://github.com/user-attachments/assets/eeb8b421-fe7e-4373-8c0d-0c67b1647204)
 
 ![pzem004t](https://github.com/user-attachments/assets/3bf7131c-a603-4d9c-95f8-cca1d57c64df)
 ![420mA](https://github.com/user-attachments/assets/c1df33d1-80e0-48d1-b87d-9c2287f28ff0)
+

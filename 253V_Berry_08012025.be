@@ -108,8 +108,8 @@ def waitUntil()
 
                 
                 if useMQTT==1
-	        mqtt.publish(m00, "Initialisation OK")
-	        mqtt.publish(m00, "DAY")
+	        mqtt.publish(m00, "Initialisation OK", true)
+	        mqtt.publish(m00, "DAY", true)
                 end
         else 
         	tasmota.set_power(1,false)
@@ -118,8 +118,8 @@ def waitUntil()
 		print('NIGHT')
 
 		if useMQTT==1
-	        mqtt.publish(m00, "Initialisation OK")
-	        mqtt.publish(m00, "NIGHT")
+	        mqtt.publish(m00, "Initialisation OK", true)
+	        mqtt.publish(m00, "NIGHT", true)
 		end
 	end
 
@@ -132,7 +132,7 @@ tasmota.add_rule("System#Boot", waitUntil)
 def powerOFF()
 print("SHUTTING DOWN: powerOFF")
 	if useMQTT==1
-	mqtt.publish(m00, "SHUTTING DOWN: powerOFF")
+	mqtt.publish(m00, "SHUTTING DOWN: powerOFF", true)
 	end
         #set.power has different indexing
 	gpio.set_pwm(27, 0)
@@ -158,7 +158,7 @@ def enableAUTO()
 print("enableAUTO")
         AUTOMATIC=1
 	if useMQTT==1
-	mqtt.publish(m00, "enableAUTO")
+	mqtt.publish(m00, "enableAUTO", true)
 	end
 end
 
@@ -166,7 +166,7 @@ def enableAUTOMATIC()
 print("enableAUTOMATIC")
         AUTOMATIC=1
 	if useMQTT==1
-	mqtt.publish(m00, "enableAUTOMATIC")
+	mqtt.publish(m00, "enableAUTOMATIC", true)
 	end
 end
 
@@ -174,7 +174,7 @@ def disableAUTOMATIC()
 print("disableAUTOMATIC")
         AUTOMATIC=0
 	if useMQTT==1
-	mqtt.publish(m00, "disableAUTOMATIC")
+	mqtt.publish(m00, "disableAUTOMATIC", true)
 	end
 end
 
@@ -213,9 +213,9 @@ else
         err=err+1
         print("Error 333 = {err=}")
 
-	if useMQTT==1
-        mqtt.publish(m00, "Error 333 = "+str(err))
-	end
+	#if useMQTT==1
+        #mqtt.publish(m00, f"Error 333 = {err}", true)
+	#end
 
 	if (err==10)
 	#powerOFF()
@@ -224,7 +224,7 @@ else
 	
 	print("Shutting down due error 333 >= 10")
 	if useMQTT==1
-        mqtt.publish(m00, "Shutting down due error 333 >= 10")
+        mqtt.publish(m00, "Shutting down due error 333 >= 10", true)
 	end
 
 	#sensor missing
@@ -237,7 +237,7 @@ if (temperature!=333) && (temperature!=666) && (temperature>maxTemp) && (wait==0
 
         print("Temperature high, cooling down, Wait=1")
 	if useMQTT==1
-	mqtt.publish(m00, "Temperature high, cooling down, Wait=1")
+	mqtt.publish(m00, "Temperature high, cooling down, Wait=1", true)
 	end
 
 end
@@ -248,7 +248,7 @@ if (temperature!=333) && (temperature!=666) && (temperature>maxTemp+2)
 	tasmota.set_power(2,false)
 	print("Temperature high, SSR failure, OUTPUT OFF")
 	if useMQTT==1
-	mqtt.publish(m00, "Temperature high, SSR failure, OUTPUT OFF")
+	mqtt.publish(m00, "Temperature high, SSR failure, OUTPUT OFF", true)
 	end
 end
 
@@ -257,7 +257,7 @@ if (temperature<histTemp) && (wait==1)
 	wait=0
 	print("Temperature ok, reasuming heating, Wait=0")
 	if useMQTT==1
-	mqtt.publish(m00, "Temperature ok, reasuming heating, Wait=0")
+	mqtt.publish(m00, "Temperature ok, reasuming heating, Wait=0", true)
 	end
 
 end
@@ -267,7 +267,7 @@ if temperature==666
 	doit=0
 	print("Error 666")
 	if useMQTT==1
-	mqtt.publish(m00, "Error 666")
+	mqtt.publish(m00, "Error 666", true)
 	end
 end
 
@@ -275,7 +275,7 @@ if temperature==333
 	#powerOFF()
         print("Error 333")
 	if useMQTT==1
-	mqtt.publish(m00, "Error 333")
+	mqtt.publish(m00, "Error 333", true)
 	end
 end
 

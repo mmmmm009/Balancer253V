@@ -40,7 +40,7 @@ var Lon=20
 
 # if you use mqtt 
 # don't forget to settup mqtt broker in tasmota config
-var useMQTT=1
+var useMQTT=0
 
 ###################################################################################################
 
@@ -84,12 +84,26 @@ var hist_H=0
 var hist_L=0
 
 
-#AUTOMATIC buton is off at startup
-tasmota.set_power(1,false)
-
 
 #timers needs a delay until system boot is finished
 def waitUntil()
+
+	if tasmota.get_option(68)==0  #means first boot ever, then setup the following
+
+		#set button names
+		tasmota.cmd('WebButton1 ON/OFF');
+		tasmota.cmd('WebButton2 AUTOMATIC');
+		tasmota.cmd('WebButton3 OUTPUT');
+		tasmota.cmd('WebButton4 M1');
+		tasmota.cmd('WebButton5 M2');
+		tasmota.cmd('WebButton6 M3');
+
+		#set resolution for Volts to xxx.xx
+		tasmota.cmd('VoltRes 1');
+       		#set separate channels for PWM (3 sliders)
+		tasmota.cmd('SetOption68 1');
+
+	end
 
 	#setting up Latitude and Longitude
 	tasmota.cmd(f"Backlog Latitude {Lat}; Longitude {Lon}")
@@ -211,7 +225,7 @@ temperature = (sensors['DS18B20']['Temperature'])
 else
 	temperature=333
         err=err+1
-        print("Error 333 = {err=}")
+        print("Error 333 = ",err)
 
 	#if useMQTT==1
         #mqtt.publish(m00, f"Error 333 = {err}", true)
@@ -275,7 +289,8 @@ if temperature==333
 	#powerOFF()
         print("Error 333")
 	if useMQTT==1
-	mqtt.publish(m00, "Error 333", true)
+        mqtt.publish(m00, f"Error 333 = {err}", true)
+	#mqtt.publish(m00, "Error 333", true)
 	end
 end
 
@@ -350,14 +365,13 @@ end
 def fast_loop()
 
 
-var sensors = json.load(tasmota.read_sensors())
-var Volts = (sensors['ENERGY']['Voltage'])
-Volt1 = Volts[0]
-Volt2 = Volts[1]
-Volt3 = Volts[2]
+if (doit==1) && (wait==0) && (AUTOMATIC==1)
 
-
-	if (doit==1) && (wait==0) && (AUTOMATIC==1)    
+		var sensors = json.load(tasmota.read_sensors())
+		var Volts = (sensors['ENERGY']['Voltage'])
+		Volt1 = Volts[0]
+		Volt2 = Volts[1]
+		Volt3 = Volts[2]
 
                 if Volt1>hist_H
 			addPWM1=1

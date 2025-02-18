@@ -93,4 +93,6 @@ Nie spalcie chaupy ;)
 
 ![pzem004t](https://github.com/user-attachments/assets/3bf7131c-a603-4d9c-95f8-cca1d57c64df)
 ![420mA](https://github.com/user-attachments/assets/c1df33d1-80e0-48d1-b87d-9c2287f28ff0)
+![snubber](https://github.com/user-attachments/assets/323c8584-9325-45f0-90e8-e8293ae54d70)
+
 
